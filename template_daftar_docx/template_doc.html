@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cetak Form Pendaftaran</title>
+  </head>
+  <style >
+  @media print, screen{
+  	.formulir{ margin: auto ;
+    /* border: 1px solid grey; */
+    padding: 0 26px;}
+  	.header-judul{
+      padding: 1em 0;
+      margin-bottom: 20px;
+  	}
+  	.logo{
+      display: inline;
+      float: left;
+      width: 112px;
+      height: auto;
+      padding: 1em;
+      margin-right: 1em;
+      position: relative;
+      bottom: 12px;
+  	}
+  	.head1{
+  		font-size: 24px;
+  		margin: 6px;
+  		font-weight: 700;
+  	}
+  	.head2{
+  		font-size: 16px;
+  		margin: 6px;
+  		line-height: 0;
+  		font-weight: 600;
+  	}
+  	.head3{
+  		font-size: 28px;
+  		margin: 6px;
+  		font-weight: 700;
+  		text-transform: uppercase;
+  	}
+  	.head4{
+  		font-size: 16px;
+  		font-weight: 600;
+  		margin: 6px;
+  		text-transform: uppercase;
+  		line-height: 0px;
+  	}
+  	.head5{
+  		font-size: 18px;
+  		margin: 6px;
+  		line-height: 32px;
+  	}
+  	.head6{
+  		font-size: 18px;
+  		margin: 6px;
+  		line-height: 6px;
+  	}
+  	hr{ border-top: 3px solid black; position: relative; bottom: 75px; clear: both;}
+  	.tab{
+  		display: inline-block;
+  		margin-left: 20px;
+      clear: both;
+  	}
+  	.alamat{
+  		position: relative;
+  		left: 16.5em;
+      bottom: 56px;
+  	}
+  	.alamatdesa, .ayah{
+  		position: relative;
+  		left:16px;
+  	}
+  	.rt{
+      position: relative;
+      left: 35.4em;
+      bottom: 52px;
+  	}
+    span.jurusan {     float: right;
+    position: relative;
+    bottom: 8em;
+    padding: 20px 50px;
+    border: 1px solid black;
+    /* margin-right: 10px; */
+}
+.sub-head{
+  margin: unset;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.content-isi{
+  position: relative;
+  bottom: 60px;
+}
+.head-form{
+  text-transform: uppercase;
+font-weight: bold;
+font-size: 25px;
+margin: unset;
+}
+.pilihan{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sub-content{
+  margin-left: 30px;
+
+}
+.jarakrumah{
+  position: relative;
+    left: 35.4em;
+    bottom: 8em;
+}
+.kabupaten{
+  position: relative;
+left: 35.4em;
+bottom:90px;
+}
+.tiri{
+  position: relative;
+left: 35.4em;
+bottom: 20px;
+}
+.in-content{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.ibu{
+  position: relative;
+  left: 35.4em;
+}
+.tanggal{
+  float: right;
+}
+.tablettd{
+  float: right;
+  border: 1px solid black;
+  border-collapse: collapse;}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+.nodaftar{
+  position: relative;
+float: right;
+bottom: 40px;
+}
+.kosong{
+  height: 170px;
+}
+.atur, .ortu{
+  position: relative;
+  bottom: 7em;
+}
+.ortuatur{
+  position: relative;
+  bottom: 13.6em;
+}
+.prestasi{
+  position: relative;
+  bottom: 14em;
+}
+
+
+  }
+  </style>
+  <body>
+    <?php //$this->db->select('*'); $this->db->from('users'); $this->db->where('id'); $query = $this->db->get()->result(); ?>
+    <section id="printcontainer">
+      <div class="formulir">
+        <div class="header-judul">
+          <img class="logo" src="logo.png" alt="">
+          <p class="head1" >YAYASAN ABADIYAH KURYOKALANGAN</p>
+          <p class="head2">NOMOR : AHU-499.AH.01.04 Tahun 2009</p>
+          <p class="head3">madrasah tsanawiyah abadiyah</p>
+          <p class="head4">status : terakreditasi A</p>
+          <p class="head5">Jl. Gabus-Tlogoayu Km.02 Kuryokalangan-Gabus-Pati</p>
+          <p class="head6"> 081325510284  59173</p>
+          <span class="jurusan"><p style"margin: unset;"><?= $siswa->prodi; ?></p></span>
+        </div>
+                  <hr>
+                  <div class="content-isi">
+                    <p class="head-form">formulir Pendaftaran calon siswa</p>
+                    <p class="sub-head">di isi sesuai dengan data yang ada di ijazah dan skhun</p>
+                    <div class="nodaftar">
+                      <table border="1" style="width:9.13em;">
+                        <tr>
+                          <th>nopendaftaran</th>
+                        </tr>
+                        <tr>
+                          <td><?= $siswa->nopendaftaran; ?></td>
+                        </tr>
+                      </table>
+                  </div>
+                    <p class="pilihan">I. &emsp;informasi data siswa</p>
+                    <div class="sub-content">
+                    <p class="in-content">1. nisn <span style="margin-left: 12.35em;">:</span> <span>&emsp;<?php echo $siswa->username;  ?></span></p>
+                    <p class="in-content">2. NIK Siswa <span style="margin-left: 9.6em;">:</span>&emsp; <?php echo $siswa->nik_siswa;  ?></p>
+                    <p class="in-content">3. nama lengkap <span style="margin-left:8.44em;">:</span>&emsp;<?= $siswa->nama_lengkap; ?></p>
+                    <p class="in-content">4. tempat, tanggal lahir <span style="margin-left: 5.77em;">:</span>&emsp;<?= $siswa->tempat_lahir; ?>, &nbsp;<?= date('d F Y', strtotime($siswa->tanggal_lahir)); ?></p>
+                    <p class="in-content">5. jenis kelamin <span style="margin-left:8.66em;">:</span>&emsp;<?= $siswa->jenis_kelamin; ?></p>
+                    <p class="in-content">6. asal sekolah <span style="margin-left:9.15em;">:</span>&emsp;<?= $siswa->asal_sekolah; ?></p>
+                    <p class="in-content">7. jenis sekolah asal <span style="margin-left:7.01em;">:</span>&emsp;<?= $siswa->jenis_sekolah_asal; ?></p>
+                    <p class="in-content">8. hobi <span style="margin-left:12.24em;">:</span>&emsp;<?= $siswa->hobi; ?></p>
+                    <p class="in-content">9. cita-cita <span style="margin-left:10.8em;">:</span>&emsp;<?= $siswa->cita; ?></p>
+                    <p class="in-content">10. jumlah saudara <span style="margin-left:7.44em;">:</span> <span class="alamatdesa">kandung</span> <span style="margin-left:1.91em;">:</span>&emsp;<?= $siswa->kandung; ?><span>&nbsp; orang</span></p>
+                    <span class="tiri">tiri</span><span style="position: relative;left: 40.41em;bottom: 21px;">:</span><span style="position: relative;left: 41em;bottom: 20px;"><?= $siswa->tiri; ?>&nbsp;orang</span>
+                    <p class="in-content" style="position: relative;bottom: 23px;">11. alamat sekolah asal <span style="margin-left:5.78em;">:</span>&emsp;<?= $siswa->alamat_sekolah_asal; ?></p>
+                    <p class="in-content" style="position: relative;bottom: 27px;">12. nopeserta/SKHUN <span style="margin-left:5.96em;">:</span>&emsp;<?= $siswa->noskhun; ?></p>
+                    <p class="in-content "style="position: relative;bottom: 28px;">13. alamat siswa/wali  <span style="margin-left:6.38em;">:</span> <span class="alamatdesa">desa</span> <span style="margin-left:3.57em;">:</span>&emsp; <?= $siswa->desa; ?></p>
+                    <span class="rt">rt/rw</span><span style="position: relative;left: 39.64em;bottom: 3.2em;">:</span><span style="position: relative;left: 40em;bottom: 50px;"><?= $siswa->rt; ?>&nbsp;rt,&nbsp;<?= $siswa->rw; ?>&nbsp;rw</span>
+                    <p class="alamat">kecamatan <span style="margin-left:0.36em;">:</span>&emsp;<?= $siswa->kecamatan; ?> </p>
+                    <span class="kabupaten">kabupaten</span> <span style="position: relative;left: 37.22em;bottom: 5.56em;">:</span><span style="position: relative;left: 37.6em;bottom: 90px;"><?= $siswa->kabupaten; ?></span>
+                    <p style="position: relative;left: 16.5em;bottom: 93px;">kodepos <span style="margin-left:1.3em;">:</span>&emsp;<?= $siswa->kodepos; ?> </p>
+                    <span class="jarakrumah">jarakrumah</span> <span style="position: relative;left: 36.77em;bottom: 8em;">:</span> <span style="position: relative;left: 37em;bottom: 8em;"><?= $siswa->jarakrumah; ?></span>
+                    <p class="in-content atur" >14. transportasi siswa <span style="margin-left:6.38em;">:</span>&emsp;<?= $siswa->transportasi_siswa; ?></p>
+                    <p class="in-content atur" style="">15. status siswa <span style="margin-left:8.76em;">:</span>&emsp;<?= $siswa->status_siswa; ?></p>
+                    </div>
+                      <p class="pilihan atur">II. &emsp;informasi data orangtua</p>
+                      <div class="sub-content">
+                      <p class="in-content ortu">1. nokk <span style="margin-left: 12.02em;">:</span> &emsp; <?= $siswa->nokk; ?></p>
+                      <p class="in-content ortu">2. Nama Orangtua <span style="margin-left:7.66em;">:</span><span class="ayah">ayah</span><span style="margin-left:3.96em;">:</span>&emsp;<?= $siswa->nama_ayah; ?></p>
+                      <span class="ibu" style="bottom:8.3em">ibu</span><span style="position: relative;left: 40.3em;bottom: 8.5em;">:</span> <span style="position: relative;left: 40.7em;bottom: 8.3em;"><?= $siswa->nama_ibu; ?></span>
+                      <p class="in-content" style="position:relative; bottom:8.3em;">3. NIK/No. KTP Orangtua <span style="margin-left: 4.38em;">:</span><span class="ayah">ayah</span><span style="margin-left:3.96em;" >:</span>&emsp;<?= $siswa->nik_ayah; ?></p>
+                      <span class="ibu" style="bottom:9.6em">ibu</span><span  style="position: relative;left: 40.3em;bottom:9.6em;">:</span> <span style="position: relative;left: 40.7em;bottom: 9.6em;"><?= $siswa->nik_ibu; ?></span>
+                      <p class="in-content" style="position:relative; bottom:9.6em;">4. Pendidikan Orangtua <span style="margin-left:5.55em;">:</span><span class="ayah">ayah</span><span style="margin-left:3.96em;" >:</span>&emsp;<?= $siswa->pendidikan_ayah; ?></p>
+                      <span class="ibu" style="bottom:11em;">ibu</span><span style="position: relative;left: 40.3em;bottom: 11em;">:</span><span style="position: relative;left: 40.7em;bottom: 11em;"><?= $siswa->pendidikan_ibu; ?></span>
+                      <p class="in-content" style="position:relative; bottom:10.9em;">5. Pekerjaan Orangtua <span style="margin-left:6.1em;">:</span><span class="ayah">ayah</span><span style="margin-left:3.96em;" >:</span>&emsp;<?= $siswa->pekerjaan_ayah; ?></p>
+                      <span class="ibu" style="bottom:12.1em;">ibu</span><span style="position: relative;left: 40.3em;bottom:12.1em;">:</span><span style="position: relative;left: 40.7em;bottom:12.1em;"><?= $siswa->pekerjaan_ibu; ?></span>
+                      <p class="in-content" style="position:relative; bottom:12.3em;">6. Agama Orangtua <span style="margin-left:7.16em;">:</span><span class="ayah">ayah</span><span style="margin-left:3.96em;" >:</span>&emsp;<?= $siswa->agama_ayah; ?></p>
+                      <span class="ibu" style="bottom:13.6em;">ibu</span><span style="position: relative;left: 40.3em;bottom: 13.6em;">:</span><span style="position: relative;left: 40.7em;bottom: 13.6em;"><?= $siswa->agama_ibu; ?></span>
+                      <p class="in-content ortuatur">7. Penghasilan orangtua perbulan <span style="margin-left:1.69em;">:</span>&emsp;<?= $siswa->penghasilan_ortu; ?></p>
+                      <p class="in-content ortuatur">8. Nomor KKS/KPS/PKH/KIP <span style="margin-left:2.65em;">:</span>&emsp;<?= $siswa->nokks; ?></p>
+                      <p class="in-content ortuatur">9. Nomor Hp Orangtua <span style="margin-left:5.74em;">:</span>&emsp;<?= $siswa->nmrhp_ortu; ?></p>
+                      </div>
+                      <p class="pilihan prestasi">III. &emsp;Prestasi Yang Pernah Diraih</p>
+                      <div class="sub-content">
+                      <p class="in-content prestasi">1. Bidang Prestasi <span style="margin-left: 7.76em;">:</span>&emsp;<?= $siswa->bidang_prestasi; ?></p>
+                      <p class="in-content prestasi">2. Tingkat Prestasi <span style="margin-left: 7.58em;">:</span>&emsp;<?= $siswa->tingkat_prestasi; ?></p>
+                      <p class="in-content prestasi">3. Peringkat/Tahun Meraih Prestasi <span style="margin-left:0.92em;">:</span>&emsp;<?= $siswa->peringkat_prestasi; ?></p>
+                      <p class="in-content prestasi">4. Jumlah Nilai SKHUN <span style="margin-left: 5.19em;">:</span>&emsp;<?= $siswa->jumlah_nilai_skhun; ?></p>
+                      </div>
+                      <p class="tanggal prestasi">kuryokalangan,... 2019</p><br><br><br>
+                      <table class="tablettd" border = "1" style="width:80%; position:relative; bottom:14em;">
+                        <tr>
+                          <th>Month</th>
+                          <th>Savings</th>
+                          <th>Month</th>
+                          <th>Savings</th>
+                        </tr>
+                        <tr>
+                          <td class="kosong">&emsp;</td>
+                          <td class="kosong">&emsp;</td>
+                          <td class="kosong">&emsp;</td>
+                          <td class="kosong">&emsp;</td>
+                        </tr>
+                      </table>
+                  </div>
+          </div>
+              </section>
+
+
+          <script>
+          window.print();
+          </script>
+  </body>
+</html>
+
